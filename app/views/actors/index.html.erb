@@ -1,0 +1,26 @@
+<h1>Actors</h1>
+
+
+<table class="table table-dark">
+  <thead>
+    <tr>
+      <th scope="col">Foto</th>
+      <th scope="col">Nombre</th>
+      <th scope="col">Bio</th>
+      <th scope="col">Fecha de nacimiento</th>
+      <th scope="col">Lugar nacimiento</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @actors.each do |actor|%>
+    <tr>
+      <td> <img src="<%= actor.image_url %>" alt=""></td>
+      <td><%= actor.name %></td>
+      <td><%= actor.bio%></td>
+      <td><%= actor.birth_date%></td>
+      <td><%= actor.birth_place%></td>
+    </tr>
+    <% end %>
+
+  </tbody>
+</table>
